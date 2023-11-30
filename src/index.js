@@ -8,6 +8,7 @@ const content = document.getElementById('content');
 content.appendChild(nav());
 content.appendChild(home());
 
+
 const homebtn = document.getElementById('homebtn');
 const menubtn = document.getElementById('menubtn');
 const contactbtn = document.getElementById('contactbtn');
@@ -29,6 +30,7 @@ contactbtn.addEventListener('click', () => {
     content.appendChild(contact());
 }
 );
+
 
 export {content};
 
