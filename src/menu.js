@@ -3,9 +3,7 @@ import {content} from './index.js';
 function menu() {
     const menu = document.createElement('div');
     menu.classList.add('menu');
-    // const head = document.createElement('h1');
-    // head.textContent = 'Menu';
-    // menu.appendChild(head);
+    menu.classList.add('page');
     const menudiv = document.createElement('div');
     menudiv.id = 'menudiv';
     const menuItems = createMenu();

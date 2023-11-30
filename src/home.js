@@ -3,6 +3,7 @@ import {content} from './index.js';
 function home() {
     const home = document.createElement('div');
     home.classList.add('home');
+    home.classList.add('page');
 
     const homediv = document.createElement('div');
     homediv.id = 'homediv';

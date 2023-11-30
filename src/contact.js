@@ -3,6 +3,7 @@ import {content} from './index.js';
 function contact() {
     const contact = document.createElement('div');
     contact.classList.add('contact');
+    contact.classList.add('page');
 
     const contactDiv = document.createElement('div');
     contactDiv.id = 'contactdiv';
