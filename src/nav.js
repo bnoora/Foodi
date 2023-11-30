@@ -1,4 +1,4 @@
-import {content, getElementById} from './index.js';
+import {content} from './index.js';
 
 function nav() {
     const nav = document.createElement('nav');
@@ -32,6 +32,7 @@ function nav() {
 
     nav.appendChild(navul);
     content.appendChild(nav);
+    return nav;
 }
 
 export {nav};

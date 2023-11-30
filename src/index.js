@@ -1,7 +1,7 @@
-import contact from './contact';
-import menu from './menu';
-import home from './home';
-import nav from './nav';
+import {contact} from './contact.js';
+import {menu} from './menu.js';
+import {home} from './home.js';
+import {nav} from './nav.js';
 
 const content = document.getElementById('content');
 
@@ -29,4 +29,6 @@ contactbtn.addEventListener('click', () => {
     content.appendChild(contact());
 }
 );
+
+export {content};
 

@@ -1,4 +1,4 @@
-import {content, getElementById} from './index.js';
+import {content} from './index.js';
 
 function contact() {
     const contact = document.createElement('div');
@@ -21,6 +21,7 @@ function contact() {
     contact.appendChild(address);
 
     content.appendChild(contact);
+    return contact;
 }
 
 export {contact};

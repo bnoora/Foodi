@@ -1,4 +1,4 @@
-import {content, getElementById} from './index.js';
+import {content} from './index.js';
 
 function menu() {
     const menu = document.createElement('div');
@@ -23,8 +23,8 @@ function menu() {
         menu.appendChild(menuItem);
     });
 
-
-
+    content.appendChild(menu);
+    return menu;
 }
 
 class MenuItem {
