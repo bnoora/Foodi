@@ -11,32 +11,23 @@ content.appendChild(nav());
 content.appendChild(home());
 content.appendChild(footer());
 
+const footerElement = content.querySelector('footer'); 
 
 const homebtn = document.getElementById('homebtn');
 const menubtn = document.getElementById('menubtn');
 const contactbtn = document.getElementById('contactbtn');
 
-homebtn.addEventListener('click', () => {
+const replaceContent = (newContent) => {
     const toRemove = content.getElementsByClassName('page');
-    content.removeChild(toRemove[0]);
-    content.appendChild(home());
+    if (toRemove.length > 0) {
+        content.removeChild(toRemove[0]);
+    }
+    content.insertBefore(newContent, footerElement); 
+};
 
-}
-);
-
-menubtn.addEventListener('click', () => {
-    const toRemove = content.getElementsByClassName('page');
-    content.removeChild(toRemove[0]);
-    content.appendChild(menu());
-}
-);
-
-contactbtn.addEventListener('click', () => {
-    const toRemove = content.getElementsByClassName('page');
-    content.removeChild(toRemove[0]);
-    content.appendChild(contact());
-}
-);
+homebtn.addEventListener('click', () => replaceContent(home()));
+menubtn.addEventListener('click', () => replaceContent(menu()));
+contactbtn.addEventListener('click', () => replaceContent(contact()));
 
 
 export {content};
