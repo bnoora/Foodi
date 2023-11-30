@@ -67,6 +67,7 @@ nav ul li button:focus {
     width: 30%;
     border: #ccc 1px solid;
     border-radius: 50%;
+    min-width: 450px;
 }
 
 #homediv h1 {
@@ -83,3 +84,59 @@ nav ul li button:focus {
     padding: 0;
 }
 
+.menu {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#menudiv {
+    display: grid;
+    align-self: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+    gap: 10px;
+    height: 80%;
+}
+
+#menudiv div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: #ccc 1px solid;
+    border-radius: 5px;
+    min-width: 250px;
+    min-height: 250px;
+    max-width: 290px;
+    max-height: 260px;
+}
+
+#menudiv div h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+
+#menudiv div p {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+#menudiv div:hover {
+    cursor: pointer;
+    background-color: #ccc;
+}
+
+
+@media (max-width: 600px) {
+    #menudiv {
+        grid-template-columns: 1fr;
+    }
+}

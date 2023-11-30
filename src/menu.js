@@ -3,6 +3,11 @@ import {content} from './index.js';
 function menu() {
     const menu = document.createElement('div');
     menu.classList.add('menu');
+    // const head = document.createElement('h1');
+    // head.textContent = 'Menu';
+    // menu.appendChild(head);
+    const menudiv = document.createElement('div');
+    menudiv.id = 'menudiv';
     const menuItems = createMenu();
     menuItems.forEach((item) => {
         const menuItem = document.createElement('div');
@@ -20,9 +25,10 @@ function menu() {
         menuItem.appendChild(name);
         menuItem.appendChild(price);
         menuItem.appendChild(description);
-        menu.appendChild(menuItem);
+        menudiv.appendChild(menuItem);
     });
 
+    menu.appendChild(menudiv);
     content.appendChild(menu);
     return menu;
 }
